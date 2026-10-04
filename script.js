@@ -2403,7 +2403,7 @@ function frScoreClass(score) {
 
 function buildFacerateAppHTML() {
   const items = [
-    ['upload', 'Upload'], ['vote', 'Vote'], ['leaderboard', 'Leaderboard'],
+    ['upload', 'Upload'], ['leaderboard', 'Leaderboard'],
     ['guides', 'Guides'], ['forum', 'Forum']
   ];
   return `
@@ -2472,26 +2472,6 @@ function frUploadView() {
   `;
 }
 
-function frVoteView() {
-  return `
-    <div class="fr-section">
-      <h3 class="fr-section-title">Tvoje hodnocení ostatních</h3>
-      <div class="fr-vote-list">
-        ${FACERATE_VOTES.map(v => `
-          <div class="fr-vote-row">
-            ${imageOrPlaceholder(v.image, '<div class="fr-pixelated small"></div>', 'small')}
-            <div class="fr-vote-main">
-              <div class="fr-vote-head"><span class="fr-vote-author">${v.author}</span><span class="fr-vote-date">${v.date}</span></div>
-              ${v.note ? `<div class="fr-vote-note">${v.note}</div>` : ''}
-            </div>
-            <span class="fr-score fr-score-${frScoreClass(v.score)} small">${v.score}<span class="fr-score-max">/10</span></span>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
-}
-
 function frLeaderboardView() {
   return `
     <div class="fr-section">
@@ -2550,7 +2530,6 @@ function renderFacerateBody() {
   const body = document.getElementById('fr-body');
   if (!body) return;
   switch (facerateView) {
-    case 'vote': body.innerHTML = frVoteView(); break;
     case 'leaderboard': body.innerHTML = frLeaderboardView(); break;
     case 'guides': body.innerHTML = frGuidesView(); break;
     case 'forum': body.innerHTML = frForumView(); break;
