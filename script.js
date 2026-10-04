@@ -1930,10 +1930,6 @@ function buildHistoryPageHTML() {
 function attachHistoryHandlers() {
   const flatItems = HISTORY_DAYS.flatMap(day => day.items);
   const entryNodes = chromePage.querySelectorAll('.chrome-history-entry');
-  entryNodes.forEach((node, i) => {
-    const item = flatItems[i];
-    node.addEventListener('click', () => navigateActiveTab(item.title, item.url));
-  });
   attachHoverPreview(entryNodes, i => flatItems[i].url);
 }
 
