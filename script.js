@@ -4800,15 +4800,6 @@ const DISCORD = {
           "texts": [
             "hraješ dneska?"
           ]
-        },
-        {
-          "author": "hidd3nfram3",
-          "lukas": true,
-          "time": "20:14",
-          "date": "12. 3. 2026",
-          "texts": [
-            "ještě nevím, dám vědět"
-          ]
         }
       ]
     }
