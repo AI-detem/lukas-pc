@@ -1144,11 +1144,6 @@ const HISTORY_DAYS = [
         "url": "wikihow.com/study-tips"
       },
       {
-        "time": "18:45",
-        "title": "Kovy: jak přežít střední - YouTube",
-        "url": "youtube.com/watch?v=kv006"
-      },
-      {
         "time": "18:10",
         "title": "Adam Táborský: jak se neztratit v davu - YouTube",
         "url": "youtube.com/watch?v=at007"
@@ -1258,11 +1253,6 @@ const HISTORY_DAYS = [
         "title": "florbal Plzeň mladší dorost - Hledat Googlem",
         "url": "google.com/search?q=florbal+Plzen+mladsi+dorost"
       },
-      {
-        "time": "18:10",
-        "title": "Kovy: co jsem se naučil v 18 - YouTube",
-        "url": "youtube.com/watch?v=kv901"
-      }
     ]
   },
   {
@@ -1312,11 +1302,6 @@ const HISTORY_DAYS = [
         "time": "21:00",
         "title": "Ali Abdaal: My New Year Reset - YouTube",
         "url": "youtube.com/watch?v=aa906"
-      },
-      {
-        "time": "20:35",
-        "title": "Kovy: novej rok, novej ja - YouTube",
-        "url": "youtube.com/watch?v=kv905"
       },
       {
         "time": "20:10",
