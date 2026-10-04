@@ -4820,7 +4820,8 @@ function renderServerRail() {
   const homeActive = discordView === 'dm';
   let html = `
     <div class="discord-server-icon home${homeActive ? ' active' : ''}" data-home="1" title="Přímé zprávy">
-      <img src="assets/icons/discord.svg" alt="" />
+      <svg class="discord-home-chat" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7.2l-4.3 3.6c-.6.5-1.5.1-1.5-.7V18H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 5.2v1.6h10V8.2H7zm0 3.6v1.6h6.5v-1.6H7z"/></svg>
+      ${DISCORD.dms.length ? `<span class="discord-home-badge">${DISCORD.dms.length}</span>` : ''}
     </div>
     <div class="discord-rail-sep"></div>
   `;

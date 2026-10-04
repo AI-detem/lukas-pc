@@ -1249,7 +1249,15 @@ body {
   background: #5865f2;
   color: #fff;
 }
-.discord-server-icon.home img { width: 26px; height: 26px; }
+.discord-server-icon.home { overflow: visible; }
+.discord-home-chat { width: 28px; height: 28px; }
+.discord-home-badge {
+  position: absolute; right: -4px; bottom: -4px;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 9px; background: #f23f42; color: #fff;
+  font-size: 12px; font-weight: 700; line-height: 18px; text-align: center;
+  box-shadow: 0 0 0 3px #1e1f22;
+}
 .discord-rail-sep { width: 32px; height: 2px; background: #35363c; border-radius: 1px; flex-shrink: 0; }
 
 /* Channel panel */
