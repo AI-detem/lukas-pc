@@ -3569,7 +3569,15 @@ function ytShortsPageHTML(id) {
         <button class="yt-shorts-arrow" id="yt-shorts-down" ${idx === shortsIds.length - 1 ? 'disabled' : ''}>▼</button>
       </div>
       <div class="yt-shorts-player">
-        <img class="yt-shorts-iframe yt-shorts-static" src="https://i.ytimg.com/vi/${activeId}/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${activeId}/hqdefault.jpg'" alt="${escapeForAttr(v.title)}" draggable="false">
+        <div class="yt-shorts-stage" id="yt-shorts-stage">
+          <img class="yt-shorts-iframe yt-shorts-static" src="https://i.ytimg.com/vi/${activeId}/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${activeId}/hqdefault.jpg'" alt="${escapeForAttr(v.title)}" draggable="false">
+          <button class="yt-shorts-play" id="yt-shorts-play" aria-label="Přehrát"><svg viewBox="0 0 68 48"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#f00"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></button>
+          <div class="yt-shorts-error hidden" id="yt-shorts-error">
+            <div class="yt-unavailable-icon">⚠</div>
+            <div class="yt-unavailable-text">Při přehrávání došlo k chybě.<br>Zkuste to znovu později.</div>
+            <button class="yt-unavailable-retry" id="yt-shorts-retry">Zkusit znovu</button>
+          </div>
+        </div>
         <div class="yt-shorts-meta">
           <div class="yt-shorts-channel"><span class="yt-card-avatar small"></span>${v.channel}<button class="yt-subscribe-btn small" id="yt-subscribe-btn">Odebírat</button></div>
           <div class="yt-shorts-title">${v.title}</div>
@@ -3586,6 +3594,18 @@ function ytShortsPageHTML(id) {
 }
 
 function attachYtShortsHandlers(id) {
+  const playBtn = document.getElementById('yt-shorts-play');
+  const errBox = document.getElementById('yt-shorts-error');
+  const retryBtn = document.getElementById('yt-shorts-retry');
+  if (playBtn && errBox) {
+    const showError = () => { playBtn.classList.add('hidden'); errBox.classList.remove('hidden'); };
+    playBtn.addEventListener('click', showError);
+    retryBtn.addEventListener('click', () => {
+      retryBtn.disabled = true;
+      retryBtn.textContent = 'Načítání…';
+      setTimeout(() => { retryBtn.disabled = false; retryBtn.textContent = 'Zkusit znovu'; }, 900);
+    });
+  }
   const shortsIds = getShortsIds();
   const idx = Math.max(0, shortsIds.indexOf(id));
   const up = document.getElementById('yt-shorts-up');
