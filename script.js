@@ -3549,8 +3549,6 @@ function attachYtWatchHandlers() {
       navigateYoutube(`youtube.com/@${channelHandleSlug(chName)}`, `${chName} - YouTube`);
     });
   }
-  const playBtn = content.querySelector('.yt-player-play');
-  if (playBtn) playBtn.addEventListener('click', () => playBtn.classList.toggle('playing'));
   const retryBtn = content.querySelector('.yt-unavailable-retry');
   if (retryBtn) retryBtn.addEventListener('click', () => {
     retryBtn.disabled = true;

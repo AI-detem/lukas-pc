@@ -3109,6 +3109,7 @@ body {
 
 /* Shorts — real playback */
 .yt-shorts-iframe { flex: 1; width: 100%; border: 0; background: #000; }
+.yt-player-surface, .yt-player-controls { pointer-events: none; }
 .yt-shorts-static { object-fit: cover; min-height: 0; pointer-events: none; user-select: none; }
 
 /* ── Systray ── */
