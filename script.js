@@ -1169,11 +1169,6 @@ const HISTORY_DAYS = [
         "url": "youtube.com/watch?v=ko004"
       },
       {
-        "time": "19:45",
-        "title": "Kovy: jak jsem přežil střední - YouTube",
-        "url": "youtube.com/watch?v=kv005"
-      },
-      {
         "time": "19:10",
         "title": "wikihow.com – Make a Study Schedule",
         "url": "wikihow.com/Make-a-Study-Schedule"
