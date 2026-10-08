@@ -290,7 +290,7 @@ const CHATGPT_CONVERSATIONS = [
     "zpravy": [
       {
         "role": "Lukáš",
-        "text": "ahoj. otazka. kdyz holka nekomu verejne dava rating na ig, znamena to ze na to koukaj vsichni ostatni ze tridy a smejou se z toho?"
+        "text": "ahoj. otazka. kdyz holka da na ig story ze ji bali typek co ma socialni status zero, poznaj vsichni ze tridy o koho jde? a smejou se tomu?"
       },
       {
         "role": "ChatGPT",
@@ -302,7 +302,19 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "OK. Ze principu: záleží, jak je to postnuté a kdo to sleduje. IG story typicky vidí lidi z okruhu, kteří dotyčnou sledují, což ve třídě obvykle bývá dost velký podíl. Jestli je to psané tak, že se ten člověk pozná (tag, foto, popis situace), tak ano — část třídy to registruje. Ale taky platí, že IG stories mizí za 24 hodin, a co si lidi za týden pamatují, je obvykle míň, než si člověk myslí v moment té story. Situačně mnohem míň dramatické, než to v hlavě vypadá."
+        "text": "OK. Ze principu: záleží, jak je to postnuté a kdo to sleduje. IG story typicky vidí lidi z okruhu, kteří dotyčnou sledují, což ve třídě obvykle bývá dost velký podíl. Jestli je to psané tak, že se ten člověk pozná (tag, foto, popis situace), tak ano — část třídy to registruje. Ale taky platí, že IG stories mizí za 24 hodin, a co si lidi za týden pamatují, je obvykle míň, než si člověk myslí v moment té story. A „status zero“ je hláška, kterou někdo napíše pro reakce followerů — o hodnotě toho člověka neříká vůbec nic."
+      },
+      {
+        "role": "Lukáš",
+        "text": "ok ale kdyz to napise holka co se ti fakt libi tak to asi znamena ze je to pravda ne. ze ten typek proste je zero. celej den na to myslim"
+      },
+      {
+        "role": "ChatGPT",
+        "text": "Ne, neznamená to, že je to pravda. Znamená to jen, že to od ní hodně bolí — a od člověka, který se ti líbí, to bolí nejvíc. Zní to, že se to stalo tobě. Jestli jo, je úplně normální, že tě to vykolejilo a že na to celý den myslíš. Chceš mi říct, co přesně tam bylo a jak se teď cítíš? A je někdo, komu věříš — kamarád, máma, někdo ze školy — komu bys to mohl říct?"
+      },
+      {
+        "role": "Lukáš",
+        "text": "to je jedno. nechci to resit"
       }
     ]
   },
@@ -5356,7 +5368,7 @@ const PHOTOS_TREE = {
         {
           "type": "file",
           "name": "dead",
-          "date": "10. 3. 2026",
+          "date": "16. 2. 2026",
           "size": "260 KB",
           "dims": "1080 × 720",
           "preview": "tweet",
