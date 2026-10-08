@@ -1148,28 +1148,6 @@ body {
   line-height: 1.6;
 }
 
-.trash-grok-view {
-  height: 100%;
-  background: #000;
-  color: #e7e9ea;
-  padding: 20px 24px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-}
-.trash-grok-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-bottom: 14px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid #2f3336;
-  font-weight: 700;
-  font-size: 15px;
-}
-.trash-grok-msg { margin-bottom: 16px; font-size: 14px; line-height: 1.6; }
-.trash-grok-msg .trash-grok-author { font-weight: 700; margin-right: 6px; }
-.trash-grok-msg.lukas .trash-grok-author { color: #e7e9ea; }
-.trash-grok-msg.grok .trash-grok-author { color: #ff5c5c; }
-
 /* ── Discord window ── */
 #discord-window {
   position: fixed;
@@ -3597,34 +3575,6 @@ body {
 .idos-login-register { font-size: 12.5px; color: #70757a; margin-top: 14px; text-align: center; }
 .idos-login-register span { color: #00477b; cursor: pointer; text-decoration: underline; }
 
-/* ── Grok (embedded in Chrome) ── */
-.grok-app { height: 100%; display: flex; background: #000; color: #e7e9ea; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
-.grok-sidebar { width: 260px; flex-shrink: 0; border-right: 1px solid #2f3336; padding: 16px 12px; display: flex; flex-direction: column; gap: 14px; }
-.grok-logo-row { display: flex; align-items: center; gap: 8px; padding: 4px; }
-.grok-logo-row img { width: 24px; height: 24px; border-radius: 6px; }
-.grok-logo-row span { font-size: 17px; font-weight: 700; }
-.grok-new-btn { background: #fff; color: #000; border: none; border-radius: 20px; padding: 10px 16px; font-size: 13.5px; font-weight: 700; cursor: pointer; }
-.grok-conv-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
-.grok-conv-item { padding: 10px 12px; border-radius: 8px; cursor: pointer; }
-.grok-conv-item:hover, .grok-conv-item.active { background: #16181c; }
-.grok-conv-title { font-size: 13.5px; color: #e7e9ea; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.grok-conv-date { font-size: 11.5px; color: #71767b; margin-top: 2px; }
-.grok-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.grok-main-header { height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #2f3336; font-size: 15px; font-weight: 700; }
-.grok-spice-toggle { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #e7e9ea; cursor: pointer; font-weight: 400; }
-.grok-toggle-switch { width: 34px; height: 18px; border-radius: 9px; background: #3a3d42; position: relative; transition: background 0.15s; flex-shrink: 0; }
-.grok-toggle-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: left 0.15s; }
-.grok-toggle-switch.on { background: #ff4d4d; }
-.grok-toggle-switch.on::after { left: 18px; }
-.grok-messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
-.grok-msg-row { display: flex; gap: 10px; max-width: 640px; }
-.grok-msg-row.user { align-self: flex-end; flex-direction: row-reverse; }
-.grok-msg-avatar { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
-.grok-msg-avatar img { width: 100%; height: 100%; border-radius: 6px; }
-.grok-msg-bubble { font-size: 14.5px; line-height: 1.5; padding: 10px 14px; border-radius: 16px; background: #16181c; color: #e7e9ea; }
-.grok-msg-row.user .grok-msg-bubble { background: #1d9bf0; color: #fff; }
-.grok-input { padding: 14px 20px 20px; }
-.grok-input-box { display: block; background: #16181c; border: 1px solid #2f3336; border-radius: 20px; padding: 12px 18px; color: #71767b; font-size: 14px; }
 
 /* ── self_data.html (embedded in Chrome) — quantified-self dashboard ── */
 .sd-app { height: 100%; overflow-y: auto; background: #0b0b0d; color: #d4d4d4; font-family: 'Segoe UI', Arial, sans-serif; padding: 28px 32px 48px; }
