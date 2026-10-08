@@ -3578,6 +3578,30 @@ function attachYtShortsHandlers(id) {
   if (down) down.addEventListener('click', () => {
     if (idx < shortsIds.length - 1) navigateYoutube(`youtube.com/shorts/${shortsIds[idx + 1]}`, 'Shorts - YouTube');
   });
+  // Swipe up/down on the player (phones) or scroll the mouse wheel over it moves between Shorts.
+  const player = document.querySelector('.yt-shorts-player');
+  if (player) {
+    const goNext = () => { if (down && !down.disabled) down.click(); };
+    const goPrev = () => { if (up && !up.disabled) up.click(); };
+    let startY = null;
+    player.addEventListener('pointerdown', e => { startY = e.clientY; });
+    player.addEventListener('pointerup', e => {
+      if (startY === null) return;
+      const dy = e.clientY - startY;
+      startY = null;
+      if (dy < -50) goNext();
+      else if (dy > 50) goPrev();
+    });
+    player.addEventListener('pointercancel', () => { startY = null; });
+    let wheelLocked = false;
+    player.addEventListener('wheel', e => {
+      e.preventDefault();
+      if (wheelLocked || Math.abs(e.deltaY) < 20) return;
+      wheelLocked = true;
+      setTimeout(() => { wheelLocked = false; }, 600);
+      if (e.deltaY > 0) goNext(); else goPrev();
+    }, { passive: false });
+  }
   const btn = document.getElementById('yt-subscribe-btn');
   if (btn) btn.addEventListener('click', () => {
     const subscribed = btn.classList.toggle('subscribed');
@@ -3723,13 +3747,13 @@ function buildYoutubeShellHTML() {
       </header>
       <div class="yt-shell-body">
         <aside class="yt-sidebar" id="yt-sidebar">
-          <div class="yt-sidebar-item" data-nav="home"><span class="yt-sidebar-icon">🏠</span>Domů</div>
-          <div class="yt-sidebar-item" data-nav="shorts"><span class="yt-sidebar-icon">⚡</span>Shorts</div>
-          <div class="yt-sidebar-item" data-nav="subscriptions"><span class="yt-sidebar-icon">📺</span>Odběry</div>
+          <div class="yt-sidebar-item" data-nav="home"><span class="yt-sidebar-icon">🏠</span><span class="yt-sidebar-label">Domů</span></div>
+          <div class="yt-sidebar-item" data-nav="shorts"><span class="yt-sidebar-icon">⚡</span><span class="yt-sidebar-label">Shorts</span></div>
+          <div class="yt-sidebar-item" data-nav="subscriptions"><span class="yt-sidebar-icon">📺</span><span class="yt-sidebar-label">Odběry</span></div>
           <div class="yt-sidebar-sep"></div>
-          <div class="yt-sidebar-item" data-nav="history"><span class="yt-sidebar-icon">🕘</span>Historie</div>
-          <div class="yt-sidebar-item" data-nav="watch_later"><span class="yt-sidebar-icon">🕓</span>Ke zhlédnutí později</div>
-          <div class="yt-sidebar-item" data-nav="liked"><span class="yt-sidebar-icon">👍</span>Videa, která se mi líbí</div>
+          <div class="yt-sidebar-item" data-nav="history"><span class="yt-sidebar-icon">🕘</span><span class="yt-sidebar-label">Historie</span></div>
+          <div class="yt-sidebar-item" data-nav="watch_later"><span class="yt-sidebar-icon">🕓</span><span class="yt-sidebar-label">Ke zhlédnutí později</span></div>
+          <div class="yt-sidebar-item" data-nav="liked"><span class="yt-sidebar-icon">👍</span><span class="yt-sidebar-label">Videa, která se mi líbí</span></div>
         </aside>
         <main class="yt-content" id="yt-content"></main>
       </div>
