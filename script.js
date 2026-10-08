@@ -5271,8 +5271,8 @@ const PHOTOS_TREE = {
       "children": [
         {
           "type": "file",
-          "name": "progres_15112025.jpg",
-          "date": "15. 11. 2025",
+          "name": "progres_05012026.jpg",
+          "date": "5. 1. 2026",
           "size": "1,8 MB",
           "dims": "1080 × 1920",
           "preview": "selfie",
