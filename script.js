@@ -1494,7 +1494,16 @@ function renderTabbar() {
   const nodes = chromeTabbar.querySelectorAll('.chrome-tab');
   nodes.forEach((node, i) => node.addEventListener('click', () => selectTab(TABS[i].id)));
   attachHoverPreview(nodes, i => TABS[i].url);
+  const activeNode = chromeTabbar.querySelector('.chrome-tab.active');
+  if (activeNode) activeNode.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
+// Tabs that don't fit can be scrolled: swipe on touch, mouse wheel on desktop.
+chromeTabbar.addEventListener('wheel', e => {
+  if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    chromeTabbar.scrollLeft += e.deltaY;
+    e.preventDefault();
+  }
+}, { passive: false });
 
 // Every tab keeps its own back/forward history — { history: [{url,title}], historyIndex }.
 // Navigating normally truncates any "forward" entries past the current position and
@@ -3938,8 +3947,9 @@ function renderRecycleList() {
     el.addEventListener('click', () => {
       rowEls.forEach(r => r.classList.remove('selected'));
       el.classList.add('selected');
+      if (isPhone()) openRecycleItem(item); // phones open on a single tap
     });
-    el.addEventListener('dblclick', () => openRecycleItem(item));
+    el.addEventListener('dblclick', () => { if (!isPhone()) openRecycleItem(item); });
     el.addEventListener('contextmenu', e => {
       e.preventDefault();
       rowEls.forEach(r => r.classList.remove('selected'));
@@ -5575,7 +5585,14 @@ photosUpBtn.addEventListener('click', () => {
   if (photosPath.length > 1) photosNavigateTo(photosPath.slice(0, -1));
 });
 photosRefreshBtn.addEventListener('click', () => renderPhotos());
-document.querySelector('.pfe-crumb-root').addEventListener('click', () => photosNavigateTo([PHOTOS_TREE]));
+// "Tento PC" (in both Fotky and Koš) leads back to the top of the Fotky a videa explorer.
+document.querySelectorAll('.pfe-crumb-root').forEach(root => root.addEventListener('click', () => {
+  if (root.closest('#recycle-window')) {
+    recycleWindow.classList.add('hidden');
+    openPhotos();
+  }
+  photosNavigateTo([PHOTOS_TREE]);
+}));
 
 photosViewBtn.addEventListener('click', e => {
   e.stopPropagation();
@@ -5715,14 +5732,16 @@ function renderPhotos() {
   const cardEls = photosGrid.querySelectorAll('.photos-card, .pfe-row');
   cardEls.forEach(el => {
     const item = ordered[Number(el.dataset.idx)];
+    const openItem = () => {
+      if (item.type === 'folder') photosNavigateTo([...photosPath, item]);
+      else openPhotoModal(item);
+    };
     el.addEventListener('click', () => {
       cardEls.forEach(c => c.classList.remove('selected'));
       el.classList.add('selected');
+      if (isPhone()) openItem(); // phones open on a single tap
     });
-    el.addEventListener('dblclick', () => {
-      if (item.type === 'folder') photosNavigateTo([...photosPath, item]);
-      else openPhotoModal(item);
-    });
+    el.addEventListener('dblclick', () => { if (!isPhone()) openItem(); });
   });
   photosGrid.scrollTop = 0;
   photosStatusCount.textContent = `${ordered.length} položek`;
@@ -7111,6 +7130,8 @@ function dismissLockScreen() {
   // The welcome screen starts revealing itself immediately, underneath the lock screen as
   // it slides up and away, instead of waiting for that slide to finish first — same
   // continuous feel as the real Windows sign-in transition, and noticeably snappier.
+  lock.style.transition = '';
+  lock.style.transform = '';
   lock.classList.add('dismissing');
   welcome.classList.remove('hidden');
   requestAnimationFrame(() => welcome.classList.add('visible'));
@@ -7125,6 +7146,37 @@ function dismissLockScreen() {
 }
 
 document.getElementById('lock-screen').addEventListener('click', dismissLockScreen);
+
+// Swipe up to unlock (touch or mouse drag): the lock screen follows the finger and
+// unlocks once pulled far enough; a short pull springs back.
+(function initLockScreenSwipe() {
+  const lock = document.getElementById('lock-screen');
+  let startY = null;
+  let dy = 0;
+  lock.addEventListener('pointerdown', e => {
+    if (lockScreenDismissed) return;
+    startY = e.clientY;
+    dy = 0;
+    lock.style.transition = 'none';
+  });
+  lock.addEventListener('pointermove', e => {
+    if (startY === null) return;
+    dy = Math.min(0, e.clientY - startY);
+    lock.style.transform = `translateY(${dy}px)`;
+  });
+  const end = () => {
+    if (startY === null) return;
+    startY = null;
+    lock.style.transition = '';
+    if (dy < -60) {
+      dismissLockScreen();
+    } else {
+      lock.style.transform = '';
+    }
+  };
+  lock.addEventListener('pointerup', end);
+  lock.addEventListener('pointercancel', end);
+})();
 document.addEventListener('keydown', () => {
   if (!lockScreenDismissed) dismissLockScreen();
 });

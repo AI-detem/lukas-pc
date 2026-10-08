@@ -14,7 +14,7 @@
       <div class="lock-time" id="lock-time">16:47</div>
       <div class="lock-date" id="lock-date">sobota 28. března</div>
     </div>
-    <div class="lock-hint">Klikněte nebo stiskněte libovolnou klávesu</div>
+    <div class="lock-hint"><span class="lock-hint-desktop">Klikněte nebo stiskněte libovolnou klávesu</span><span class="lock-hint-phone">Potáhněte nahoru nebo klepněte</span></div>
   </div>
 
   <!-- Welcome transition (Windows sign-in style) -->
@@ -169,14 +169,18 @@
   <!-- Chrome browser window -->
   <div id="chrome-window" class="hidden">
     <div class="chrome-titlebar">
-      <div class="chrome-traffic-lights"><span></span><span></span><span></span></div>
       <div class="chrome-tabbar" id="chrome-tabbar"></div>
-      <button class="chrome-close" id="chrome-close-btn">✕</button>
+      <span class="chrome-newtab" aria-hidden="true">+</span>
+      <div class="chrome-win-controls">
+        <span class="chrome-win-btn" aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor" stroke-width="1"/></svg></span>
+        <span class="chrome-win-btn" aria-hidden="true"><svg viewBox="0 0 10 10"><rect x="0.5" y="0.5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+        <button class="chrome-close" id="chrome-close-btn" aria-label="Zavřít"><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor" stroke-width="1"/></svg></button>
+      </div>
     </div>
     <div class="chrome-toolbar">
       <div class="chrome-nav-btns">
-        <span class="chrome-nav-btn disabled" id="chrome-nav-back">‹</span>
-        <span class="chrome-nav-btn disabled" id="chrome-nav-forward">›</span>
+        <span class="chrome-nav-btn disabled" id="chrome-nav-back">←</span>
+        <span class="chrome-nav-btn disabled" id="chrome-nav-forward">→</span>
         <span class="chrome-nav-btn">⟳</span>
       </div>
       <div class="chrome-address-bar">
