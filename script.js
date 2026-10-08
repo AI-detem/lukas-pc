@@ -1855,10 +1855,10 @@ function buildGenericSiteHTML(siteKey) {
 }
 
 function buildHistoryPageHTML() {
-  const groupsHtml = HISTORY_DAYS.map(day => `
-    <div class="chrome-history-date-heading">${day.date}</div>
+  const groupsHtml = HISTORY_DAYS.map((day, d) => `
+    <div class="chrome-history-date-heading" data-day="${d}">${day.date}</div>
     ${day.items.map(item => `
-      <div class="chrome-history-entry">
+      <div class="chrome-history-entry" data-day="${d}">
         <img class="chrome-history-favicon" src="${faviconForUrl(item.url)}" alt="" />
         <div class="chrome-history-text">
           <span class="chrome-history-entry-title">${item.title}</span>
@@ -1874,6 +1874,7 @@ function buildHistoryPageHTML() {
         <div class="chrome-history-title">Historie</div>
         <input class="chrome-history-search" placeholder="Prohledat historii" />
         ${groupsHtml}
+        <div class="chrome-history-empty hidden">Nebyly nalezeny žádné výsledky</div>
       </div>
     </div>
   `;
@@ -1883,6 +1884,23 @@ function attachHistoryHandlers() {
   const flatItems = HISTORY_DAYS.flatMap(day => day.items);
   const entryNodes = chromePage.querySelectorAll('.chrome-history-entry');
   attachHoverPreview(entryNodes, i => flatItems[i].url);
+
+  // Search matches title or URL, ignoring case and diacritics ("sachy" finds "šachy").
+  const normalize = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const haystacks = flatItems.map(item => normalize(item.title + ' ' + item.url));
+  const headingNodes = chromePage.querySelectorAll('.chrome-history-date-heading');
+  const emptyNode = chromePage.querySelector('.chrome-history-empty');
+  chromePage.querySelector('.chrome-history-search').addEventListener('input', e => {
+    const terms = normalize(e.target.value).split(/\s+/).filter(Boolean);
+    const visibleDays = new Set();
+    entryNodes.forEach((node, i) => {
+      const match = terms.every(t => haystacks[i].includes(t));
+      node.classList.toggle('hidden', !match);
+      if (match) visibleDays.add(node.dataset.day);
+    });
+    headingNodes.forEach(node => node.classList.toggle('hidden', !visibleDays.has(node.dataset.day)));
+    emptyNode.classList.toggle('hidden', visibleDays.size > 0);
+  });
 }
 
 function buildChatGptAppHTML() {

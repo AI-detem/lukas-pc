@@ -447,6 +447,15 @@ body {
   margin-bottom: 18px;
 }
 .chrome-history-search:focus { outline: none; background: #e8eaed; }
+.chrome-history-empty {
+  font-size: 14px;
+  color: #5f6368;
+  text-align: center;
+  padding: 32px 0;
+}
+.chrome-history-date-heading.hidden,
+.chrome-history-entry.hidden,
+.chrome-history-empty.hidden { display: none; }
 .chrome-history-date-group { margin-bottom: 4px; }
 .chrome-history-date-heading {
   font-size: 13px;
