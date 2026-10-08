@@ -3759,6 +3759,7 @@ const RECYCLE_ITEMS = [
   {
     "id": "foto-upraveno",
     "name": "her.",
+    "createdDate": "3. 12. 2025",
     "deletedDate": "22. 3. 2026",
     "size": "2,4 MB",
     "icon": "assets/icons/file-image.svg",
@@ -3945,7 +3946,7 @@ function openRecycleItemViewer(item) {
   else openTrashViewer(item);
 }
 function recycleItemToModalFile(item) {
-  return { name: item.name, date: item.deletedDate, size: item.size, dims: '', desc: item.caption || '', image: item.image, preview: item.preview, _recycleSource: item };
+  return { name: item.name, date: item.createdDate || item.deletedDate, size: item.size, dims: '', desc: item.caption || '', image: item.image, preview: item.preview, _recycleSource: item };
 }
 function openRecycleItemModal(item) {
   const imageItems = RECYCLE_ITEMS.filter(r => r.type === 'image-blur' || r.type === 'image-missing');
