@@ -7009,7 +7009,7 @@ document.addEventListener('click', () => startMenu.classList.add('hidden'));
 // ── Toast notification ──
 const TOAST_CONTENT = {
   "title": "Looksmaxx CZ/SK",
-  "textHtml": "<strong>KOROLEV_88</strong> tě zmínil v <strong>#foto-rating</strong>",
+  "textHtml": "Nová zpráva v <strong>#foto-rating</strong>",
   "targetServerId": "looksmaxx",
   "targetChannel": "foto-rating"
 };
