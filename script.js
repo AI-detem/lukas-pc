@@ -253,7 +253,7 @@ const CHATGPT_CONVERSATIONS = [
     ]
   },
   {
-    "titul": "Zájem o spolužačku",
+    "titul": "Sociální status",
     "datum": "16. 2. 2026",
     "zpravy": [
       {
@@ -957,7 +957,7 @@ const HISTORY_DAYS = [
     "items": [
       {
         "time": "23:22",
-        "title": "ChatGPT – Zájem o spolužačku",
+        "title": "ChatGPT – Sociální status",
         "url": "chat.openai.com/c/9ffa8ef6-3429-4f9f-af90-9891809efdf2"
       },
       {
@@ -5509,7 +5509,7 @@ let photosPath = [PHOTOS_TREE];
 let photosHistory = [[PHOTOS_TREE]];
 let photosHistoryIndex = 0;
 let photosViewMode = 'grid'; // 'grid' | 'details' | 'list'
-let photosSortBy = 'name'; // 'name' | 'date' | 'size'
+let photosSortBy = 'date'; // 'name' | 'date' | 'size'
 let photosModalFiles = [];
 let photosModalIndex = -1;
 let photosModalSource = 'folder'; // 'folder' (Fotky tree) | 'recycle' (Koš)
@@ -6897,32 +6897,32 @@ const WHATSAPP_CHATS = [
     "id": "david",
     "name": "David",
     "messages": [
-      { "from": "david", "text": "čau, nevíš co máme na zítra?", "date": "12. 9. 2025", "time": "15:42" },
-      { "from": "lukas", "text": "matiku a něco do češtiny", "date": "12. 9. 2025", "time": "15:47" },
+      { "from": "david", "text": "cau nevis co mame na zitra?", "date": "12. 9. 2025", "time": "15:42" },
+      { "from": "lukas", "text": "matiku a neco do cestiny", "date": "12. 9. 2025", "time": "15:47" },
       { "from": "david", "text": "co z matiky", "date": "12. 9. 2025", "time": "15:48" },
       { "from": "lukas", "text": "pockej", "date": "12. 9. 2025", "time": "15:52" },
-      { "from": "lukas", "text": "str 47 př 3-6", "date": "12. 9. 2025", "time": "15:55" },
-      { "from": "david", "text": "ok dík", "date": "12. 9. 2025", "time": "15:56" },
+      { "from": "lukas", "text": "str 47 pr 3-6", "date": "12. 9. 2025", "time": "15:55" },
+      { "from": "david", "text": "ok dik", "date": "12. 9. 2025", "time": "15:56" },
 
-      { "from": "david", "text": "hele neposílal někdo ten soubor z dneška", "date": "26. 9. 2025", "time": "16:14" },
+      { "from": "david", "text": "hele neposilal nekdo ten soubor z dneska", "date": "26. 9. 2025", "time": "16:14" },
       { "from": "lukas", "text": "kterej", "date": "26. 9. 2025", "time": "16:22" },
-      { "from": "david", "text": "jak jsme tam měli doplnit ty otázky", "date": "26. 9. 2025", "time": "16:22" },
-      { "from": "lukas", "text": "jo mám", "date": "26. 9. 2025", "time": "16:31" },
-      { "from": "lukas", "text": "pošlu", "date": "26. 9. 2025", "time": "16:31" },
-      { "from": "david", "text": "dík 🙏", "date": "26. 9. 2025", "time": "16:34" },
+      { "from": "david", "text": "jak jsme tam meli doplnit ty otazky", "date": "26. 9. 2025", "time": "16:22" },
+      { "from": "lukas", "text": "jo mam", "date": "26. 9. 2025", "time": "16:31" },
+      { "from": "lukas", "text": "poslu", "date": "26. 9. 2025", "time": "16:31" },
+      { "from": "david", "text": "dik 🙏", "date": "26. 9. 2025", "time": "16:34" },
 
-      { "from": "david", "text": "zejtra je ta písemka?", "date": "14. 10. 2025", "time": "19:08" },
+      { "from": "david", "text": "zejtra je ta pisemka?", "date": "14. 10. 2025", "time": "19:08" },
       { "from": "lukas", "text": "jj", "date": "14. 10. 2025", "time": "19:41" },
-      { "from": "david", "text": "z čeho přesně", "date": "14. 10. 2025", "time": "19:42" },
-      { "from": "lukas", "text": "všechno od poslední", "date": "14. 10. 2025", "time": "19:52" },
+      { "from": "david", "text": "z ceho presne", "date": "14. 10. 2025", "time": "19:42" },
+      { "from": "lukas", "text": "vsechno od posledni", "date": "14. 10. 2025", "time": "19:52" },
       { "from": "david", "text": "aha 💀", "date": "14. 10. 2025", "time": "19:53" },
-      { "from": "david", "text": "ty ses učil?", "date": "14. 10. 2025", "time": "19:54" },
+      { "from": "david", "text": "ty ses ucil?", "date": "14. 10. 2025", "time": "19:54" },
       { "from": "lukas", "text": "trochu", "date": "14. 10. 2025", "time": "20:33" },
 
-      { "from": "david", "text": "dneska se píše nebo až zejtra", "date": "3. 12. 2025", "time": "12:47" },
+      { "from": "david", "text": "dneska se pise nebo az zejtra", "date": "3. 12. 2025", "time": "12:47" },
       { "from": "lukas", "text": "zejtra", "date": "3. 12. 2025", "time": "13:24" },
-      { "from": "david", "text": "díky", "date": "3. 12. 2025", "time": "13:25" },
-      { "from": "david", "text": "si v pohodě?", "date": "3. 12. 2025", "time": "13:31" }
+      { "from": "david", "text": "diky", "date": "3. 12. 2025", "time": "13:25" },
+      { "from": "david", "text": "si v pohode?", "date": "3. 12. 2025", "time": "13:31" }
     ]
   }
 ];
