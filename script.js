@@ -267,7 +267,7 @@ const CHATGPT_CONVERSATIONS = [
   },
   {
     "titul": "Sociální status",
-    "datum": "16. 2. 2026",
+    "datum": "26. 2. 2026",
     "zpravy": [
       {
         "role": "Lukáš",
@@ -819,6 +819,11 @@ const HISTORY_DAYS = [
     "date": "26. 2. 2026",
     "items": [
       {
+        "time": "23:22",
+        "title": "ChatGPT – Sociální status",
+        "url": "chat.openai.com/c/9ffa8ef6-3429-4f9f-af90-9891809efdf2"
+      },
+      {
         "time": "23:11",
         "title": "Looksmax Official: canthal tilt explained - YouTube",
         "url": "youtube.com/watch?v=lo030"
@@ -963,11 +968,6 @@ const HISTORY_DAYS = [
   {
     "date": "16. 2. 2026",
     "items": [
-      {
-        "time": "23:22",
-        "title": "ChatGPT – Sociální status",
-        "url": "chat.openai.com/c/9ffa8ef6-3429-4f9f-af90-9891809efdf2"
-      },
       {
         "time": "23:05",
         "title": "jak vypadat starší a zralejší - Hledat Googlem",
@@ -2571,7 +2571,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-06-05",
+    "date": "2025-09-06",
     "watched": true,
     "views": "312 mil. zhlédnutí",
     "duration": "18:42"
@@ -2584,7 +2584,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-06-12",
+    "date": "2025-11-14",
     "watched": false,
     "views": "89 mil. zhlédnutí",
     "duration": "2:31"
@@ -2597,7 +2597,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-06-18",
+    "date": "2025-09-14",
     "watched": false,
     "views": "4,3 mil. zhlédnutí",
     "duration": "0:52"
@@ -2610,7 +2610,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-06-24",
+    "date": "2025-10-05",
     "watched": false,
     "views": "2,1 mil. zhlédnutí",
     "duration": "9:14"
@@ -2623,7 +2623,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-06-30",
+    "date": "2025-11-25",
     "watched": false,
     "views": "11 mil. zhlédnutí",
     "duration": "0:38"
@@ -2636,7 +2636,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-07-08",
+    "date": "2025-09-11",
     "watched": true,
     "views": "22 mil. zhlédnutí",
     "duration": "3:47"
@@ -2649,7 +2649,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-07-18",
+    "date": "2026-01-03",
     "watched": true,
     "views": "48 mil. zhlédnutí",
     "duration": "5:12"
@@ -2662,7 +2662,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 1,
     "category": "gaming",
-    "date": "2025-07-25",
+    "date": "2026-01-06",
     "watched": true,
     "views": "3,2 mil. zhlédnutí",
     "duration": "9:38"
@@ -2675,7 +2675,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 2,
     "category": "manosphere",
-    "date": "2025-08-04",
+    "date": "2026-01-02",
     "watched": false,
     "views": "1,8 mil. zhlédnutí",
     "duration": "11:24"
@@ -2688,7 +2688,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 2,
     "category": "manosphere",
-    "date": "2025-08-15",
+    "date": "2025-12-28",
     "watched": false,
     "views": "184 tis. zhlédnutí",
     "duration": "8:05"
@@ -2701,7 +2701,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 3,
     "category": "manosphere",
-    "date": "2025-09-03",
+    "date": "2026-02-17",
     "watched": false,
     "views": "2,1 mil. zhlédnutí",
     "duration": "10:12"
@@ -2714,7 +2714,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 3,
     "category": "manosphere",
-    "date": "2025-09-20",
+    "date": "2026-02-17",
     "watched": true,
     "views": "640 tis. zhlédnutí",
     "duration": "14:50"
@@ -2727,7 +2727,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 3,
     "category": "manosphere",
-    "date": "2025-09-28",
+    "date": "2026-02-18",
     "watched": true,
     "views": "9,8 mil. zhlédnutí",
     "duration": "0:59"
@@ -2740,7 +2740,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 3,
     "category": "manosphere",
-    "date": "2025-10-12",
+    "date": "2026-02-19",
     "watched": true,
     "views": "1,2 mil. zhlédnutí",
     "duration": "6:33"
@@ -2753,7 +2753,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 3,
     "category": "manosphere",
-    "date": "2025-10-20",
+    "date": "2026-02-24",
     "watched": false,
     "views": "780 tis. zhlédnutí",
     "duration": "9:17"
@@ -2766,7 +2766,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 4,
     "category": "manosphere",
-    "date": "2025-11-02",
+    "date": "2026-02-11",
     "watched": true,
     "views": "18 mil. zhlédnutí",
     "duration": "0:41"
@@ -2779,7 +2779,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 4,
     "category": "manosphere",
-    "date": "2025-11-08",
+    "date": "2026-02-08",
     "watched": true,
     "views": "2,4 mil. zhlédnutí",
     "duration": "13:42"
@@ -2792,7 +2792,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 4,
     "category": "manosphere",
-    "date": "2025-11-15",
+    "date": "2026-02-10",
     "watched": false,
     "views": "950 tis. zhlédnutí",
     "duration": "11:05"
@@ -2805,7 +2805,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 4,
     "category": "manosphere",
-    "date": "2025-11-22",
+    "date": "2026-02-09",
     "watched": true,
     "views": "6,3 mil. zhlédnutí",
     "duration": "0:47"
@@ -2818,7 +2818,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 4,
     "category": "manosphere",
-    "date": "2025-11-29",
+    "date": "2026-02-16",
     "watched": true,
     "views": "3,1 mil. zhlédnutí",
     "duration": "15:21"
@@ -2831,7 +2831,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 5,
     "category": "manosphere",
-    "date": "2025-12-03",
+    "date": "2026-02-14",
     "watched": false,
     "views": "7,9 mil. zhlédnutí",
     "duration": "0:55"
@@ -2844,7 +2844,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 5,
     "category": "manosphere",
-    "date": "2025-12-10",
+    "date": "2026-02-15",
     "watched": false,
     "views": "620 tis. zhlédnutí",
     "duration": "0:44"
@@ -2857,7 +2857,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 5,
     "category": "manosphere",
-    "date": "2025-12-18",
+    "date": "2026-02-15",
     "watched": true,
     "views": "1,4 mil. zhlédnutí",
     "duration": "12:08"
@@ -2870,7 +2870,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 5,
     "category": "manosphere",
-    "date": "2025-12-27",
+    "date": "2026-02-07",
     "watched": true,
     "views": "210 tis. zhlédnutí",
     "duration": "9:52"
@@ -2883,7 +2883,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 5,
     "category": "manosphere",
-    "date": "2025-12-30",
+    "date": "2026-02-16",
     "watched": false,
     "views": "3,6 mil. zhlédnutí",
     "duration": "10:41"
@@ -2896,7 +2896,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 6,
     "category": "manosphere",
-    "date": "2026-01-04",
+    "date": "2026-02-12",
     "watched": false,
     "views": "2,1 mil. zhlédnutí",
     "duration": "0:39"
@@ -2909,7 +2909,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 6,
     "category": "manosphere",
-    "date": "2026-01-10",
+    "date": "2026-02-13",
     "watched": true,
     "views": "5,4 mil. zhlédnutí",
     "duration": "0:51"
@@ -2922,7 +2922,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 6,
     "category": "manosphere",
-    "date": "2026-01-15",
+    "date": "2026-03-02",
     "watched": true,
     "views": "3,3 mil. zhlédnutí",
     "duration": "0:46"
@@ -2935,7 +2935,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 6,
     "category": "manosphere",
-    "date": "2026-01-22",
+    "date": "2026-03-05",
     "watched": true,
     "views": "11 mil. zhlédnutí",
     "duration": "0:58"
@@ -2948,7 +2948,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 6,
     "category": "manosphere",
-    "date": "2026-01-29",
+    "date": "2026-02-27",
     "watched": false,
     "views": "4,8 mil. zhlédnutí",
     "duration": "18:24"
@@ -2961,7 +2961,7 @@ const YT_HOME_VIDEOS = [
     "format": "short",
     "phase": 7,
     "category": "manosphere",
-    "date": "2026-02-03",
+    "date": "2026-03-06",
     "watched": false,
     "views": "14 mil. zhlédnutí",
     "duration": "0:49"
@@ -2974,7 +2974,7 @@ const YT_HOME_VIDEOS = [
     "format": "long",
     "phase": 7,
     "category": "manosphere",
-    "date": "2026-02-15",
+    "date": "2026-02-20",
     "watched": false,
     "views": "2,9 mil. zhlédnutí",
     "duration": "16:07"
