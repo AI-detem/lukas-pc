@@ -940,8 +940,8 @@ const HISTORY_DAYS = [
     "items": [
       {
         "time": "19:41",
-        "title": "facerate.io/upload",
-        "url": "facerate.io/upload"
+        "title": "facerate.io – Get your PSL score",
+        "url": "facerate.io"
       },
       {
         "time": "18:22",
