@@ -23,6 +23,18 @@ function startClock() {
 }
 
 // ── Window manager: draggable windows + click-to-focus stacking (classic desktop behavior) ──
+// ── Phone (portrait) layout: windows go full-screen and two-pane apps show one pane at a time ──
+const phoneQuery = window.matchMedia('(max-width: 700px)');
+function isPhone() { return phoneQuery.matches; }
+function mBackBtn(action) {
+  return `<button type="button" class="m-back" data-m-back="${action}" aria-label="Zpět">‹</button>`;
+}
+const M_BACK_ACTIONS = {};
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-m-back]');
+  if (btn && M_BACK_ACTIONS[btn.dataset.mBack]) M_BACK_ACTIONS[btn.dataset.mBack]();
+});
+
 let topWindowZIndex = 900;
 let focusedWindowEl = null;
 function bringWindowToFront(windowEl) {
@@ -39,6 +51,7 @@ function makeWindowDraggable(windowEl, titlebarEl) {
   let startX = 0, startY = 0, startLeft = 0, startTop = 0;
   titlebarEl.addEventListener('mousedown', e => {
     if (e.target.closest('button')) return; // don't drag when clicking the close button etc.
+    if (isPhone()) return; // windows are full-screen on phones
     dragging = true;
     const rect = windowEl.getBoundingClientRect();
     startX = e.clientX;
@@ -1919,6 +1932,7 @@ function buildChatGptAppHTML() {
       </aside>
       <main class="chatgpt-main">
         <div class="chatgpt-main-header">
+          <button type="button" class="m-only chatgpt-m-menu" id="chatgpt-m-menu" aria-label="Konverzace">☰</button>
           <button type="button" class="chatgpt-model-dropdown">
             <span>ChatGPT 4o</span>
             <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
@@ -1931,6 +1945,7 @@ function buildChatGptAppHTML() {
           </div>
         </div>
       </main>
+      <div class="chatgpt-m-scrim" id="chatgpt-m-scrim"></div>
     </div>
     <div class="chatgpt-settings-overlay hidden" id="chatgpt-settings-overlay">
       <div class="chatgpt-settings-modal">
@@ -1958,6 +1973,10 @@ function attachChatGptAppHandlers() {
   if (settingsBtn && overlay) settingsBtn.addEventListener('click', () => overlay.classList.remove('hidden'));
   if (closeBtn && overlay) closeBtn.addEventListener('click', () => overlay.classList.add('hidden'));
   if (overlay) overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.add('hidden'); });
+  // Phones: the conversation list is a drawer opened from the ☰ button, like the mobile app.
+  const app = document.getElementById('chatgpt-app');
+  document.getElementById('chatgpt-m-menu').addEventListener('click', () => app.classList.add('m-drawer-open'));
+  document.getElementById('chatgpt-m-scrim').addEventListener('click', () => app.classList.remove('m-drawer-open'));
 }
 
 function renderConvList() {
@@ -1972,6 +1991,7 @@ function renderConvList() {
   nodes.forEach((node, i) => {
     node.addEventListener('click', () => {
       activeConvIndex = i;
+      document.getElementById('chatgpt-app').classList.remove('m-drawer-open');
       renderConversation();
       const chatgptTab = TABS.find(t => t.id === 'chatgpt');
       if (chatgptTab) { pushTabHistory(chatgptTab); updateNavButtons(); }
@@ -4768,13 +4788,19 @@ function renderServerRail() {
     return `<div class="discord-server-icon${active ? ' active' : ''}" data-server="${s.id}" title="${s.joined}"${style}>${inner}</div>`;
   }).join('');
   discordServerRail.innerHTML = html;
-  discordServerRail.querySelector('[data-home]').addEventListener('click', openDiscordDMs);
+  discordServerRail.querySelector('[data-home]').addEventListener('click', () => { openDiscordDMs(); setDiscordPhoneDetail(false); });
   discordServerRail.querySelectorAll('[data-server]').forEach(node => {
     node.addEventListener('click', () => selectDiscordServer(node.dataset.server));
   });
 }
 
+function setDiscordPhoneDetail(on) {
+  document.querySelector('.discord-app').classList.toggle('m-detail', on);
+}
+M_BACK_ACTIONS.discord = () => setDiscordPhoneDetail(false);
+
 function selectDiscordServer(id) {
+  setDiscordPhoneDetail(false);
   discordView = 'server';
   discordActiveServerId = id;
   renderServerRail();
@@ -4802,6 +4828,7 @@ function renderChannelPanel() {
       server.activeChannel = node.dataset.channel;
       renderChannelPanel();
       renderServerChannel();
+      setDiscordPhoneDetail(true);
     });
   });
 }
@@ -4889,7 +4916,7 @@ function renderServerChannel() {
   // Voice channels get Discord's usual built-in text chat too — same rendering
   // path as a text channel, just with a 🔊 header icon instead of #.
   const isVoiceChannel = channel.type === 'voice';
-  discordMainHeader.innerHTML = `<span class="discord-hash">${isVoiceChannel ? '🔊' : '#'}</span><span>${channel.name}</span><span class="discord-topic">${channel.topic}</span>`;
+  discordMainHeader.innerHTML = `${mBackBtn('discord')}<span class="discord-hash">${isVoiceChannel ? '🔊' : '#'}</span><span>${channel.name}</span><span class="discord-topic">${channel.topic}</span>`;
   discordMessages.innerHTML = renderMessageBlocks(channel.messages || []);
   discordMessages.scrollTop = discordMessages.scrollHeight;
   discordInputBox.textContent = `Napsat zprávu do ${isVoiceChannel ? channel.name : '#' + channel.name}`;
@@ -4961,6 +4988,7 @@ function openDiscordDMs() {
     node.addEventListener('click', () => {
       discordActiveDmId = node.dataset.dm;
       openDiscordDMs();
+      setDiscordPhoneDetail(true);
     });
   });
 
@@ -4976,7 +5004,7 @@ function renderDMConversation() {
     discordMemberPanel.classList.add('hidden');
     return;
   }
-  discordMainHeader.innerHTML = `<span class="discord-avatar" style="background:${discordAvatarColor(dm.name)};width:24px;height:24px;font-size:11px">${dm.name.charAt(0).toUpperCase()}</span><span>${dm.name}</span>`;
+  discordMainHeader.innerHTML = `${mBackBtn('discord')}<span class="discord-avatar" style="background:${discordAvatarColor(dm.name)};width:24px;height:24px;font-size:11px">${dm.name.charAt(0).toUpperCase()}</span><span>${dm.name}</span>`;
   discordMessages.innerHTML = renderMessageBlocks(dm.messages);
   discordMessages.scrollTop = discordMessages.scrollHeight;
   discordInputBox.textContent = `Napsat zprávu uživateli @${dm.name}`;
@@ -5000,6 +5028,7 @@ function openDiscord() {
     renderServerRail();
     renderChannelPanel();
     renderServerChannel();
+    setDiscordPhoneDetail(false);
   }
   bringWindowToFront(discordWindow);
 }
@@ -5016,6 +5045,7 @@ function openDiscordToChannel(serverId, channelName) {
   renderServerRail();
   renderChannelPanel();
   renderServerChannel();
+  setDiscordPhoneDetail(true);
 }
 
 // ── Photos / File explorer ──
@@ -6846,9 +6876,15 @@ function renderWhatsAppChatList() {
       whatsappReadIds.add(row.dataset.id);
       renderWhatsAppChatList();
       renderWhatsAppMain();
+      setWhatsAppPhoneDetail(true);
     });
   });
 }
+
+function setWhatsAppPhoneDetail(on) {
+  document.querySelector('.wa-app').classList.toggle('m-detail', on);
+}
+M_BACK_ACTIONS.whatsapp = () => setWhatsAppPhoneDetail(false);
 
 function renderWhatsAppMain() {
   const main = document.getElementById('wa-main');
@@ -6859,7 +6895,7 @@ function renderWhatsAppMain() {
   }
   if (!chat.messages.length) {
     main.innerHTML = `
-      <div class="wa-main-header"><span class="wa-chat-avatar">${chat.name.charAt(0)}</span><span class="wa-main-header-name">${chat.name}</span></div>
+      <div class="wa-main-header">${mBackBtn('whatsapp')}<span class="wa-chat-avatar">${chat.name.charAt(0)}</span><span class="wa-main-header-name">${chat.name}</span></div>
       <div class="wa-empty-state">Zatím žádné zprávy.</div>
     `;
     return;
@@ -6874,7 +6910,7 @@ function renderWhatsAppMain() {
     return `${dateDivider}<div class="wa-msg ${m.from === 'lukas' ? 'out' : 'in'}"><div class="wa-msg-bubble">${m.text}<span class="wa-msg-time">${m.time}</span></div></div>`;
   }).join('');
   main.innerHTML = `
-    <div class="wa-main-header"><span class="wa-chat-avatar">${chat.name.charAt(0)}</span><span class="wa-main-header-name">${chat.name}</span></div>
+    <div class="wa-main-header">${mBackBtn('whatsapp')}<span class="wa-chat-avatar">${chat.name.charAt(0)}</span><span class="wa-main-header-name">${chat.name}</span></div>
     <div class="wa-messages" id="wa-messages">${bubbles}</div>
     <div class="wa-input"><span class="wa-input-box">Napiš zprávu</span></div>
   `;
@@ -6884,8 +6920,13 @@ function renderWhatsAppMain() {
 
 function openWhatsApp() {
   whatsappWindow.classList.remove('hidden');
-  if (!whatsappOpenId) whatsappOpenId = 'mama';
-  whatsappReadIds.add(whatsappOpenId);
+  if (isPhone()) {
+    // Phones start on the chat list, like the real app.
+    setWhatsAppPhoneDetail(false);
+  } else {
+    if (!whatsappOpenId) whatsappOpenId = 'mama';
+    whatsappReadIds.add(whatsappOpenId);
+  }
   renderWhatsAppChatList();
   renderWhatsAppMain();
   bringWindowToFront(whatsappWindow);
