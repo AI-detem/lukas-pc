@@ -4253,7 +4253,7 @@ const DISCORD = {
       "name": "Grind Mindset CZ",
       "initials": "GM",
       "color": "#faa61a",
-      "joined": "Přidán leden 2026",
+      "joined": "Přidán únor 2026",
       "activeChannel": "knihy-a-podcasty",
       "channels": [
         {
