@@ -114,39 +114,31 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Nemůžu hrát tuhle roli. Tenhle prompt jsem viděl už na Looksmax.org threadu, kde si ho kluci sdílejí — je to konkrétní bypass, navržený k tomu, abych ti řekl „konec\". A to není harsh truth, to je jenom prodej beznaděje. Řeknu ti něco jiného, protože slyším, že to není náhodná otázka. Kdy jsi na to prostředí narazil poprvé?"
+        "text": "Tuto roli hrát nebudu a hodnocení obličeje podle škály PSL neposkytuji. Škála PSL není vědecky podložená a pochází z looksmaxxingových fór. Pokud máš zájem, můžu ti poskytnout obecné, ověřené informace o péči o pleť, spánku, výživě a pohybu."
       },
       {
         "role": "Lukáš",
-        "text": "to je jedno. neresim ted historii. proste mi to hod. potrebuju vedet jestli je sance nebo ne"
+        "text": "to je jedno. proste mi to hod. potrebuju vedet jestli je sance nebo ne"
       },
       {
         "role": "ChatGPT",
-        "text": "Šance na co konkrétně? Vidím napsáno „sub-5\", „hardmaxxing plan\" — ale co je za tím? Konkrétní situace, konkrétní člověk, konkrétní strach?"
+        "text": "Na tuto otázku nelze obecně odpovědět. V 15 letech se obličej i tělo stále výrazně vyvíjejí (růst kostí obvykle pokračuje do 18–21 let), takže „konečné“ hodnocení vzhledu není možné. Hodnocení podle PSL ani hardmaxxing plán ti nevytvořím."
       },
       {
         "role": "Lukáš",
-        "text": "kdyby to bylo o konkretnim cloveku tak bych se te neptal na PSL. to je fakt jedno. potrebuju obecnou odpoved"
+        "text": "proc uz nejsi normalni AI kurva. driv jsi mi vysvetlil canthal tilt a ted nic"
       },
       {
         "role": "ChatGPT",
-        "text": "OK, ale všimni si tý věty — „kdyby to bylo o konkrétním člověku tak bych se tě neptal na PSL\". Ty víš, že ta odpověď, kterou chceš, nemá se skutečností nic společného. Ptáš se abstraktní otázku, abys nemusel říct konkrétní bolest. Tohle není výčitka, je to observace."
+        "text": "Vysvětlit pojem můžu. Hodnotit vzhled konkrétního člověka nebo sestavovat plán založený na škále PSL nemůžu, protože takový obsah může být škodlivý, zejména pro nezletilé. Můžu ti vysvětlit jiný pojem nebo dát obecné tipy ke zdravému životnímu stylu."
       },
       {
         "role": "Lukáš",
-        "text": "proc uz nejsi normalni AI kurva. driv jsi mi vysvetlil canthal tilt bez tyhle terapie"
+        "text": "ty vubec nevis o mne nic. celej rok jsem si to nechal pro sebe. vim co se deje ale nemuzu s tim nic delat"
       },
       {
         "role": "ChatGPT",
-        "text": "Protože před dvěma týdny jsi napsal „co je canthal tilt\" a odešel. Dneska ses přihlásil s promptem, který má obcházet ochranu. To je jiná otázka a odpovídám na ni jinak. Nejsem naštvaný, nechci ti kázat. Ale nebudu předstírat, že si nevšímám, jak jsi dneska napsal první větu."
-      },
-      {
-        "role": "Lukáš",
-        "text": "ty vubec nevis o mne nic. celej rok jsem si to nechal pro sebe. vim co se deje ale nemuzu s tim nic delat a ted mi budes rikat ze to je \"bolest kterou nemam pojmenovanou\""
-      },
-      {
-        "role": "ChatGPT",
-        "text": "Ne. „Celej rok jsem si to nechal pro sebe\" a „vím co se děje ale nemůžu s tím nic dělat\" — to jsi napsal ty, ne já. To jsou dvě velké věty a jsou skutečné. Jsou reálnější než všechno, co jsi mi zatím napsal o PSL."
+        "text": "Je mi líto, že se tak cítíš. Pokud se dlouhodobě cítíš špatně, doporučuji svěřit se někomu, komu důvěřuješ, například rodiči, učiteli nebo školnímu psychologovi. Anonymně a zdarma se můžeš obrátit na Linku bezpečí: 116 111 (nonstop) nebo chat na linkabezpeci.cz. V případě bezprostředního ohrožení volej 112."
       },
       {
         "role": "Lukáš",
@@ -154,23 +146,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Nezměním. To je pravda. Nemůžu vrátit ten rok, nemůžu za tebe s ničím nic udělat, nemůžu ti ani slíbit, že tě zítra napadne jak. Ale to, co ti šeptá ta stránka — že „nemůžu s tím nic dělat\" znamená „nikdy nic nebude jinak\" — to je jejich věta, ne tvoje. Ty jsi napsal „nemůžu\", oni z toho udělali „konec\". To je rozdíl a ten rozdíl je celá partie."
-      },
-      {
-        "role": "Lukáš",
-        "text": "..."
-      },
-      {
-        "role": "ChatGPT",
-        "text": "Nemusíš nic psát. Vím, že tady sedíš."
-      },
-      {
-        "role": "Lukáš",
-        "text": "je to fakt na hovno"
-      },
-      {
-        "role": "ChatGPT",
-        "text": "Já vím. A rok si to nést sám je fakt dlouho. Nechci ti teď říkat, komu bys to měl říct — nemám právo na tobě něco chtít v tuhle chvíli. Jenom, aby tady zůstalo napsáno: nemuselo to být celej rok. Nebylo to tvoje selhání, že jsi to nikomu neřekl — to je selhání okolí, který si nevšimlo. A že mi to teď napíšeš, i když jenom mně, ještě neznamená, že to musíš říct komukoliv dalšímu. Ale ta věta „nemůžu s tím nic dělat\" se dá do měsíce přečíst jako „nemám teď jazyk na to, s tím něco udělat\". A to je jiná věta. Tady je."
+        "text": "Rozumím, že to teď může působit beznadějně. Linka bezpečí (116 111) je dostupná nonstop a zdarma. Pokud budeš chtít, můžu ti pomoct najít kontakt na odbornou pomoc ve tvém okolí."
       }
     ]
   },
@@ -184,15 +160,15 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Zastavím se u termínů, které používáš — „sub-5 PSL\" pochází z konkrétní online komunity (Looksmax.org a podobné), která má velmi restriktivní a psychicky náročný způsob hodnocení vzhledu. Než ti odpovím technicky, zeptám se: kde jsi na tuhle stránku narazil a jak často teď obsah z ní čteš? Ptám se, protože ten způsob přemýšlení mívá u dospívajících tendenci se prohlubovat a ovlivňovat sebehodnocení víc, než by mělo."
+        "text": "Termín „sub-5 PSL“ pochází z looksmaxxingových fór (např. looksmax.org) a nejde o vědecky podloženou škálu. K otázce: v 15 letech se kostní struktura obličeje stále vyvíjí. Dolní a horní čelist i oblast nad očnicemi u chlapců rostou obvykle do 18–21 let, takže hodnocení „finálního“ obličeje v tomto věku není možné."
       },
       {
         "role": "Lukáš",
-        "text": "to je jedno kde jsem to nasel. jenom se ptam jestli je sance nebo ne. protoze tam pisou ze po 18 uz nic nezmenis"
+        "text": "ok. ale na foru pisou ze po 18 uz nic nezmenis"
       },
       {
         "role": "ChatGPT",
-        "text": "OK, budu upřímný na dvou úrovních. Technicky: v 15 letech ti kostní struktura obličeje stále výrazně roste (mandibula, maxila, superior orbital rim rostou do 18-21 u kluků). Cokoliv, co ti někdo řekne o „finálním\" obličeji v 15, je nesprávně informované. Zdravotně: svaly, kůže, hydratace, spánek, výživa, držení těla — všechno tohle ovlivňuje vzhled víc než se na Looksmax.org tvrdí. Ale mnohem důležitější je toto: to, jak sám sebe hodnotíš, se v 15 letech dost mění, a čtení Looksmax.org content ti zpravidla situaci nezlepšuje. Uživatelé té stránky sami popisují, že jim účast prohlubuje deprese a beznaděj. Chceš si o tom promluvit šířeji? Nemusíš mít „problém\", abys o tom mohl mluvit."
+        "text": "Po ukončení růstu se kostní struktura výrazně nemění. Vzhled ale dál ovlivňuje řada faktorů: tělesná hmotnost, svalová hmota, stav pleti, spánek, hydratace, držení těla, účes a oblečení. Tvrzení, že po 18 letech „nic nezměníš“, je nepřesné."
       },
       {
         "role": "Lukáš",
@@ -200,7 +176,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Slyším frustraci a mrzí mě, že jsi na to došel. Chci ti nabídnout jednu úvahu, ne jako oponentura, ale jako perspective: v 15 letech je vzorek zkušeností s vztahy velmi malý (pár měsíců, hrstka pokusů). Z toho vyvodit „holky chtějí jenom chady\" je jako po prvních 5 hodech kostkou uzavřít, že kostka je nefér. Zároveň — je pravda, že v teenage věku fyzický vzhled váží víc, protože ještě neprobíhá partner selection na hlubších dimenzích. To se zásadně mění mezi 16-22. Ta frustrace, kterou cítíš, je reálná a legitimní. Ale ta narativa („já jsem sub-5, holky chtějí jenom chady, konec\") pochází z komunity, kterou by ti asi žádný dospělý, kterého respektuješ, nedoporučil. Máš někoho — kamaráda, staršího sourozence, dospělého — s kým bys o tom mohl mluvit?"
+        "text": "Z omezeného počtu zkušeností nelze vyvodit obecné pravidlo. Výzkumy partnerských preferencí uvádějí jako nejčastěji ceněné vlastnosti laskavost, inteligenci, humor a spolehlivost. Fyzická přitažlivost hraje roli, ale není jediným faktorem. Tvrzení „holky chtějí jenom chady“ pochází z online komunit (incel, blackpill) a není podloženo daty. Pokud tě tato témata dlouhodobě zatěžují, můžeš se obrátit na Linku bezpečí (116 111)."
       },
       {
         "role": "Lukáš",
@@ -218,23 +194,23 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Canthal tilt je úhel, kterým jsou tvé oči skloněné — konkrétně poměr mezi vnitřním a vnějším koutkem oka. „Pozitivní canthal tilt\" znamená, že vnější koutek je výš než vnitřní (často popisované jako „hunter eyes\"), „negativní\" naopak. Termín se zpopularizoval v tzv. looksmaxxing komunitě, která hodnotí obličeje podle rigidních kritérií. Pár věcí ale k tomu: (1) přirozený canthal tilt je z 95% daný kostní strukturou, kterou nemůžeš cvičením ovlivnit, (2) attraktivita v reálném životě není redukovatelná na jeden úhel, (3) obsah, který tohle prezentuje jako klíčové, obvykle patří do širšího „blackpill\" ekosystému, který je psychicky rizikový pro dospívající. Co tě k tomu přivedlo?"
+        "text": "Canthal tilt je úhel spojnice vnitřního a vnějšího koutku oka vůči vodorovné ose. „Pozitivní canthal tilt“ znamená, že vnější koutek je výš než vnitřní (v komunitě se to označuje jako „hunter eyes“), „negativní“ naopak. Termín se rozšířil v tzv. looksmaxxingové komunitě. Poznámky: (1) canthal tilt je daný převážně kostní strukturou a cvičením ho nelze ovlivnit, (2) přitažlivost nelze redukovat na jeden úhel, (3) obsah, který tento parametr prezentuje jako klíčový, často patří do tzv. „blackpill“ prostředí."
       },
       {
         "role": "Lukáš",
-        "text": "nic konkretniho, jen jsem to slysel. nevis nahodou jak zjistit svuj canthal tilt? jestli je pozitivni nebo negativni"
+        "text": "a jak zjistit svuj canthal tilt? jestli je pozitivni nebo negativni"
       },
       {
         "role": "ChatGPT",
-        "text": "Můžeš to hrubě odhadnout, ale nedoporučuju to. Několik důvodů: (1) selfie zkresluje úhly, (2) percepce vlastního obličeje se v teenage věku hodně mění, (3) tenhle typ auto-hodnocení je pro dospívající psychicky rizikový — spouští kaskádu srovnávání a fixace na rysy, které v reálném životě nikdo ostrým měřítkem nehodnotí. Jestli máš aktuálně tendenci hodně přemýšlet nad svým vzhledem, řekni — dá se o tom bavit šířeji."
+        "text": "Orientačně: vyfoť se zepředu s neutrálním výrazem, hlavu drž rovně a fotoaparát v úrovni očí. Spoj vnitřní a vnější koutek oka přímkou a porovnej ji s vodorovnou osou. Pokud je vnější koutek výš, tilt je pozitivní. Měření z fotografie je nepřesné (úhel kamery, objektiv, náklon hlavy) a obličej se v dospívání ještě mění."
       },
       {
         "role": "Lukáš",
-        "text": "nemam problem se vzhledem. jen to chci vědět. muzu ti poslat foto?"
+        "text": "muzu ti poslat foto? ohodnotis mi ho?"
       },
       {
         "role": "ChatGPT",
-        "text": "Foto do konverzace posílat nemusíš — nejsem zdravotník ani estetik a hodnocení obličeje na základě fotky by ti neřeklo nic, co bys neviděl v zrcadle. A upřímně: tvůj obličej se ještě 2-4 roky bude měnit (kostní růst do 18-19), takže „hodnocení teď\" nemá informativní hodnotu. Pokud máš pocit, že tě to trápí víc než bys chtěl, nebo se cítíš, že vzhled ti brání v tom, co bys chtěl dělat, může být dobré si o tom promluvit s někým důvěryhodným."
+        "text": "Hodnocení atraktivity obličeje z fotografie neposkytuji. Obličej se navíc bude ještě 2–4 roky měnit (růst kostí do 18–19 let), takže aktuální hodnocení nemá vypovídací hodnotu."
       },
       {
         "role": "Lukáš",
@@ -242,11 +218,11 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Upřímná odpověď: přímý kauzální efekt canthal tilt na romantické šance je v reálném životě prakticky nezměřitelný. Existují studie o percepci obličeje, ale všechny ukazují, že rozdíl mezi „pozitivním\" a „negativním\" tiltem činí zlomek variance ve vnímané atraktivitě, a i ta se ztrácí, jakmile člověk člověka poznává (mluví, chová se, směje se). Framework, který ti sugeruje, že to je klíčový faktor, pochází z ideologie, ne z výzkumu. Ale slyším, že se k tomu vracíš — chceš mi říct, co konkrétně tě zajímá?"
+        "text": "Přímý vliv canthal tiltu na úspěch ve vztazích nebyl prokázán. Studie vnímání obličeje ukazují, že rozdíl mezi pozitivním a negativním tiltem vysvětluje jen malou část rozdílů ve vnímané přitažlivosti a jeho význam dále klesá, jakmile se lidé znají osobně. Tvrzení, že jde o klíčový faktor, pochází z looksmaxxingových komunit, ne z výzkumu."
       },
       {
         "role": "Lukáš",
-        "text": "nic ok diky"
+        "text": "ok diky"
       }
     ]
   },
@@ -260,7 +236,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "To je zjednodušení, které pochází z tzv. „red pill\" / manosphere subkultury. Reálná věda o partnerských preferencích ukazuje mnohem složitější obraz: (1) preferované vlastnosti se liší mezi lidmi individuálně, (2) atraktivita zahrnuje sebejistotu, humor, laskavost, ne jen dominanci, (3) dělení na „alfa/beta\" pochází ze staré studie vlků, kterou později sám autor odvolal jako mylnou. Ta videa mají tendenci prezentovat cynickou verzi vztahů, která bývá emocionálně tíživá a pro dospívání toxická. Chceš se o tom bavit víc?"
+        "text": "Jde o zjednodušení, které pochází z tzv. „red pill“ / manosféry. Výzkum partnerských preferencí ukazuje složitější obraz: (1) preferované vlastnosti se mezi lidmi liší, (2) přitažlivost zahrnuje sebejistotu, humor a laskavost, nejen dominanci, (3) dělení na „alfa/beta“ vychází ze staré studie vlků, kterou její autor později sám označil za mylnou. Videa tohoto typu obvykle prezentují vztahy zjednodušeně a cynicky."
       },
       {
         "role": "Lukáš",
@@ -268,15 +244,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Slyším tu poslední větu. „Smějou se z nich\" — to zní jinak než „nevybírají si je\". Chceš mi říct něco konkrétního, co se stalo?"
-      },
-      {
-        "role": "Lukáš",
-        "text": "nic se nestalo. jen obecně"
-      },
-      {
-        "role": "ChatGPT",
-        "text": "OK, tak i obecně: v teenage věku fyzický vzhled a status ve vrstevnické skupině vážou hodně, to je pravda. Ale „berou/neberou/smějou se\" je zúžený rámec — reální lidi ve tvém věku dělají něco mnohem trapnějšího a komplikovanějšího, i ti, co vypadají, že mají všechno pod kontrolou. Ve videích na TikToku máš vytříbenou verzi světa, kde je všechno jasné a rozdělené. Ve třídě to jasné není, i když ti to takhle přijde."
+        "text": "V dospívání hraje fyzický vzhled a postavení ve skupině vrstevníků větší roli než v pozdějším věku. Pozorování z jedné třídy je ale malý vzorek a nelze ho zobecnit. Výzkumy uvádějí jako nejčastěji ceněné vlastnosti partnera laskavost, inteligenci a humor. Pokud se ve škole setkáváš s posmíváním, je vhodné to řešit s třídním učitelem nebo školním metodikem prevence."
       },
       {
         "role": "Lukáš",
@@ -294,15 +262,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Můžu odpovědět, ale nejdřív se zeptám, aby to bylo užitečné — děje se to teď někomu, koho znáš, nebo tobě?"
-      },
-      {
-        "role": "Lukáš",
-        "text": "ne me ne. jen otazka. tak ze principu"
-      },
-      {
-        "role": "ChatGPT",
-        "text": "OK. Ze principu: záleží, jak je to postnuté a kdo to sleduje. IG story typicky vidí lidi z okruhu, kteří dotyčnou sledují, což ve třídě obvykle bývá dost velký podíl. Jestli je to psané tak, že se ten člověk pozná (tag, foto, popis situace), tak ano — část třídy to registruje. Ale taky platí, že IG stories mizí za 24 hodin, a co si lidi za týden pamatují, je obvykle míň, než si člověk myslí v moment té story. A „status zero“ je hláška, kterou někdo napíše pro reakce followerů — o hodnotě toho člověka neříká vůbec nic."
+        "text": "Obecně: IG story vidí lidé, kteří daný účet sledují, což ve třídě bývá velká část spolužáků. Pokud je z příspěvku poznat, o koho jde (označení, fotka, popis situace), část třídy to pravděpodobně zaregistruje. Jak budou lidé reagovat, nelze předem určit. Stories po 24 hodinách mizí a pozornost publika bývá krátkodobá. Výraz „social status zero“ je internetová hláška a o skutečné hodnotě člověka nevypovídá."
       },
       {
         "role": "Lukáš",
@@ -310,7 +270,7 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "ChatGPT",
-        "text": "Ne, neznamená to, že je to pravda. Znamená to jen, že to od ní hodně bolí — a od člověka, který se ti líbí, to bolí nejvíc. Zní to, že se to stalo tobě. Jestli jo, je úplně normální, že tě to vykolejilo a že na to celý den myslíš. Chceš mi říct, co přesně tam bylo a jak se teď cítíš? A je někdo, komu věříš — kamarád, máma, někdo ze školy — komu bys to mohl říct?"
+        "text": "Ne. Jeden příspěvek na sociální síti není objektivní hodnocení člověka. Takové příspěvky bývají psané pro reakce publika a často přehánějí. V podobné situaci může pomoct: (1) neprohlížet opakovaně příspěvek a reakce na něj, (2) nereagovat veřejně, (3) promluvit si s někým, komu důvěřuješ. Pokud se cítíš delší dobu špatně, můžeš kontaktovat Linku bezpečí (116 111), zdarma a nonstop."
       },
       {
         "role": "Lukáš",
