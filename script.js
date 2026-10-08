@@ -3719,9 +3719,6 @@ function buildYoutubeShellHTML() {
     <div class="yt-app">
       <header class="yt-topbar">
         <div class="yt-topbar-left">
-          <span class="yt-icon-btn" title="Menu">
-            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-          </span>
           <div class="yt-logo" id="yt-logo-home">
             <svg viewBox="0 0 28 20" width="28" height="20"><rect width="28" height="20" rx="6" fill="#ff0000"/><path d="M11 6l8 4-8 4z" fill="#fff"/></svg>
             <span>YouTube</span>
