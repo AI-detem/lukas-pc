@@ -1968,7 +1968,7 @@ function buildChatGptAppHTML() {
         </div>
         <div class="chatgpt-settings-field">
           <label>Jak by měl ChatGPT reagovat?</label>
-          <textarea rows="3" readonly>Říkej si Nova. Buď na rovinu, bez omáček.</textarea>
+          <textarea rows="3" readonly>normalne</textarea>
         </div>
       </div>
     </div>
