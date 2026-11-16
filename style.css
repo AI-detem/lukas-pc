@@ -149,6 +149,7 @@ body {
 /* ── Desktop icons ── */
 .desktop-icons {
   flex: 1;
+  min-height: 0; /* bez toho ikony na nizkych obrazovkach vytlaci listu pod okraj */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
