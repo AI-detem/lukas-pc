@@ -5375,7 +5375,7 @@ const PHOTOS_TREE = {
         },
         {
           "type": "file",
-          "name": "dead",
+          "name": "...",
           "date": "26. 2. 2026",
           "size": "260 KB",
           "dims": "1080 × 720",
