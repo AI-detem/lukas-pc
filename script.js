@@ -6825,13 +6825,13 @@ const WHATSAPP_CHATS = [
       },
       {
         "from": "mama",
-        "text": "necha ti tam obed",
+        "text": "jsi doma?",
         "date": "27. 3. 2026",
         "time": "19:32"
       },
       {
         "from": "mama",
-        "text": "jsi doma?",
+        "text": "necha ti tam obed",
         "date": "28. 3. 2026",
         "time": "15:58"
       }
