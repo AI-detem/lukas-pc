@@ -1964,7 +1964,7 @@ function buildChatGptAppHTML() {
         </div>
         <div class="chatgpt-settings-field">
           <label>Jak ti mám říkat?</label>
-          <textarea rows="2" readonly>Lukáš</textarea>
+          <textarea rows="2" readonly>Lukas</textarea>
         </div>
         <div class="chatgpt-settings-field">
           <label>Jak by měl ChatGPT reagovat?</label>
