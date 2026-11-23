@@ -5933,80 +5933,80 @@ const CS2_MATCHES = [
     "map": "Mirage",
     "win": true,
     "score": "13:9",
-    "kd": "24 / 15 / 6",
-    "ratio": "1.60",
+    "kd": "30 / 15 / 6",
+    "ratio": "2.00",
     "time": "21. 3. 2026, 02:44"
   },
   {
     "map": "Inferno",
     "win": false,
     "score": "8:13",
-    "kd": "14 / 16 / 5",
-    "ratio": "0.88",
+    "kd": "18 / 16 / 5",
+    "ratio": "1.12",
     "time": "19. 3. 2026, 23:58"
   },
   {
     "map": "Ancient",
     "win": true,
     "score": "13:11",
-    "kd": "19 / 15 / 4",
-    "ratio": "1.27",
+    "kd": "24 / 15 / 4",
+    "ratio": "1.60",
     "time": "18. 3. 2026, 01:12"
   },
   {
     "map": "Anubis",
     "win": false,
     "score": "10:13",
-    "kd": "17 / 16 / 7",
-    "ratio": "1.06",
+    "kd": "21 / 16 / 7",
+    "ratio": "1.31",
     "time": "16. 3. 2026, 22:30"
   },
   {
     "map": "Dust II",
     "win": true,
     "score": "13:7",
-    "kd": "22 / 12 / 3",
-    "ratio": "1.83",
+    "kd": "28 / 12 / 3",
+    "ratio": "2.33",
     "time": "15. 3. 2026, 00:47"
   },
   {
     "map": "Nuke",
     "win": false,
     "score": "9:13",
-    "kd": "13 / 17 / 4",
-    "ratio": "0.76",
+    "kd": "16 / 17 / 4",
+    "ratio": "0.94",
     "time": "13. 3. 2026, 23:05"
   },
   {
     "map": "Mirage",
     "win": true,
     "score": "13:10",
-    "kd": "21 / 15 / 5",
-    "ratio": "1.40",
+    "kd": "26 / 15 / 5",
+    "ratio": "1.73",
     "time": "11. 3. 2026, 01:33"
   },
   {
     "map": "Overpass",
     "win": false,
     "score": "11:13",
-    "kd": "16 / 16 / 6",
-    "ratio": "1.00",
+    "kd": "20 / 16 / 6",
+    "ratio": "1.25",
     "time": "9. 3. 2026, 22:52"
   },
   {
     "map": "Vertigo",
     "win": true,
     "score": "13:6",
-    "kd": "23 / 11 / 2",
-    "ratio": "2.09",
+    "kd": "29 / 11 / 2",
+    "ratio": "2.64",
     "time": "7. 3. 2026, 00:18"
   },
   {
     "map": "Inferno",
     "win": false,
     "score": "7:13",
-    "kd": "12 / 14 / 3",
-    "ratio": "0.86",
+    "kd": "15 / 14 / 3",
+    "ratio": "1.07",
     "time": "5. 3. 2026, 23:40"
   }
 ];
@@ -6071,8 +6071,8 @@ function buildCs2BodyHTML() {
 
     <div class="cs2-stats-row">
       <div class="cs2-stat-card warn"><div class="cs2-stat-value">232 h</div><div class="cs2-stat-label">Odehráno v březnu</div></div>
-      <div class="cs2-stat-card"><div class="cs2-stat-value">1.34</div><div class="cs2-stat-label">K/D ratio</div></div>
-      <div class="cs2-stat-card"><div class="cs2-stat-value">42 %</div><div class="cs2-stat-label">Headshot %</div></div>
+      <div class="cs2-stat-card"><div class="cs2-stat-value">1.68</div><div class="cs2-stat-label">K/D ratio</div></div>
+      <div class="cs2-stat-card"><div class="cs2-stat-value">53 %</div><div class="cs2-stat-label">Headshot %</div></div>
     </div>
 
     <div class="cs2-section-title">Odehrané hodiny za měsíc</div>
@@ -6122,8 +6122,8 @@ const HALO_MATCHES = [
     "map": "Aquarius",
     "win": true,
     "score": "50:38",
-    "kd": "18 / 12 / 5",
-    "ratio": "1.50",
+    "kd": "22 / 12 / 5",
+    "ratio": "1.83",
     "time": "20. 3. 2026, 22:47"
   },
   {
@@ -6131,8 +6131,8 @@ const HALO_MATCHES = [
     "map": "Live Fire",
     "win": false,
     "score": "42:50",
-    "kd": "14 / 15 / 4",
-    "ratio": "0.93",
+    "kd": "18 / 15 / 4",
+    "ratio": "1.20",
     "time": "19. 3. 2026, 21:15"
   },
   {
@@ -6140,8 +6140,8 @@ const HALO_MATCHES = [
     "map": "Recharge",
     "win": true,
     "score": "50:44",
-    "kd": "16 / 12 / 6",
-    "ratio": "1.33",
+    "kd": "20 / 12 / 6",
+    "ratio": "1.67",
     "time": "17. 3. 2026, 23:02"
   },
   {
@@ -6149,8 +6149,8 @@ const HALO_MATCHES = [
     "map": "Deadlock",
     "win": false,
     "score": "62:75",
-    "kd": "22 / 22 / 8",
-    "ratio": "1.00",
+    "kd": "28 / 22 / 8",
+    "ratio": "1.27",
     "time": "15. 3. 2026, 20:40"
   },
   {
@@ -6158,8 +6158,8 @@ const HALO_MATCHES = [
     "map": "Streets",
     "win": true,
     "score": "50:33",
-    "kd": "20 / 11 / 3",
-    "ratio": "1.82",
+    "kd": "25 / 11 / 3",
+    "ratio": "2.27",
     "time": "12. 3. 2026, 22:10"
   },
   {
@@ -6167,8 +6167,8 @@ const HALO_MATCHES = [
     "map": "Aquarius",
     "win": false,
     "score": "39:50",
-    "kd": "13 / 16 / 5",
-    "ratio": "0.81",
+    "kd": "16 / 16 / 5",
+    "ratio": "1.00",
     "time": "9. 3. 2026, 21:55"
   }
 ];
@@ -6242,7 +6242,7 @@ function buildHaloBodyHTML() {
         <div class="halo-rank-icon">ONX</div>
         <div>
           <div class="halo-rank-text">Onyx</div>
-          <div class="halo-rank-sub">1 850 CSR</div>
+          <div class="halo-rank-sub">2 310 CSR</div>
         </div>
       </div>
     </div>
