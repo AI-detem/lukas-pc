@@ -287,6 +287,15 @@ const CHATGPT_CONVERSATIONS = [
       },
       {
         "role": "Lukáš",
+        "foto": "...",
+        "text": "myslim tohle"
+      },
+      {
+        "role": "ChatGPT",
+        "text": "Na obrázku je story ve formátu „POV“ s emoji. Tenhle formát je obvykle míněný jako vtip pro sledující, ne jako popis konkrétního člověka. Z příspěvku samotného nejde poznat, o koho jde, ani jestli popisuje skutečnou situaci. Pokud se tě to týká, je pochopitelné, že tě to zasáhlo. Platí doporučení výše: nevracet se k příspěvku opakovaně a promluvit si s někým, komu důvěřuješ."
+      },
+      {
+        "role": "Lukáš",
         "text": "to je jedno. nechci to resit"
       }
     ]
@@ -2033,11 +2042,32 @@ function renderConversation() {
     return `
       <div class="chatgpt-msg-row ${isLukas ? 'user' : 'assistant'}">
         ${!isLukas ? avatar : ''}
-        <div class="chatgpt-msg-bubble"><p>${escapeHtml(msg.text)}</p></div>
+        <div class="chatgpt-msg-bubble">${msg.foto ? chatGptPhotoHtml(msg.foto) : ''}<p>${escapeHtml(msg.text)}</p></div>
       </div>
     `;
   }).join('');
   messages.scrollTop = 0;
+}
+
+// Fotka přiložená ke zprávě v ChatGPT: hledá se podle názvu ve Fotkách (PHOTOS_TREE), aby se obrázek neduplikoval.
+function findPhotoByName(node, name) {
+  if (!node) return null;
+  if (Array.isArray(node)) {
+    for (const item of node) { const f = findPhotoByName(item, name); if (f) return f; }
+    return null;
+  }
+  if (typeof node !== 'object') return null;
+  if (node.type === 'file' && node.name === name) return node;
+  for (const key of Object.keys(node)) {
+    if (node[key] && typeof node[key] === 'object') { const f = findPhotoByName(node[key], name); if (f) return f; }
+  }
+  return null;
+}
+
+function chatGptPhotoHtml(name) {
+  const photo = findPhotoByName(PHOTOS_TREE, name);
+  if (!photo || !photo.image) return '';
+  return `<img src="${photo.image}" class="chatgpt-msg-photo" alt="" />`;
 }
 
 function renderActivePage() {

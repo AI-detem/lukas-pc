@@ -872,6 +872,7 @@ body {
   padding: 10px 16px;
   border-radius: 18px;
 }
+.chatgpt-msg-photo { display: block; max-width: 220px; max-height: 320px; width: auto; height: auto; border-radius: 12px; margin: 0 0 8px auto; }
 .chatgpt-msg-bubble p { margin: 0 0 10px; }
 .chatgpt-msg-bubble p:last-child { margin-bottom: 0; }
 .chatgpt-msg-bubble ul { margin: 6px 0 10px; padding-left: 20px; }
