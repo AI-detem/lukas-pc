@@ -2208,7 +2208,7 @@ const FACERATE_SUBMISSIONS = [
 
 const FACERATE_VOTES = [
   {
-    "author": "KOROLEV_88",
+    "author": "KOROLEV_74",
     "date": "21. 3. 2026",
     "score": 2,
     "note": "2. heavy recessed chin, no frame. brutal but true."
@@ -4430,7 +4430,7 @@ const DISCORD = {
               ]
             },
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "17:05",
               "date": "9. 3. 2026",
               "texts": [
@@ -4537,7 +4537,7 @@ const DISCORD = {
               ]
             },
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "22:40",
               "date": "21. 3. 2026",
               "texts": [
@@ -4581,7 +4581,7 @@ const DISCORD = {
               ]
             },
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "09:20",
               "date": "9. 3. 2026",
               "texts": [
@@ -4621,7 +4621,7 @@ const DISCORD = {
               ]
             },
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "23:55",
               "date": "23. 3. 2026",
               "texts": [
@@ -4647,7 +4647,7 @@ const DISCORD = {
           "topic": "",
           "messages": [
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "22:04",
               "date": "26. 3. 2026",
               "texts": [
@@ -4703,7 +4703,7 @@ const DISCORD = {
               ]
             },
             {
-              "author": "KOROLEV_88",
+              "author": "KOROLEV_74",
               "time": "16:35",
               "date": "19. 3. 2026",
               "texts": [
@@ -4749,7 +4749,7 @@ const DISCORD = {
         { "key": "mentor", "label": "MENTOR", "color": "#eb459e", "icon": "🌹" }
       ],
       "memberRoles": {
-        "KOROLEV_88": "mentor"
+        "KOROLEV_74": "mentor"
       }
     }
   ],
