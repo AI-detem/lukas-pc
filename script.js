@@ -293,10 +293,6 @@ const CHATGPT_CONVERSATIONS = [
       {
         "role": "ChatGPT",
         "text": "Na obrázku je story ve formátu „POV“ s emoji. Tenhle formát je obvykle míněný jako vtip pro sledující, ne jako popis konkrétního člověka. Z příspěvku samotného nejde poznat, o koho jde, ani jestli popisuje skutečnou situaci. Pokud se tě to týká, je pochopitelné, že tě to zasáhlo. Platí doporučení výše: nevracet se k příspěvku opakovaně a promluvit si s někým, komu důvěřuješ."
-      },
-      {
-        "role": "Lukáš",
-        "text": "to je jedno. nechci to resit"
       }
     ]
   },
