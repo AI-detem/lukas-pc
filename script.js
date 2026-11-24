@@ -7124,7 +7124,8 @@ function renderLockScreenClock() {
   const h = String(d.getHours()).padStart(2, '0');
   const m = String(d.getMinutes()).padStart(2, '0');
   document.getElementById('lock-time').textContent = `${h}:${m}`;
-  document.getElementById('lock-date').textContent = `${CZ_WEEKDAYS[d.getDay()]} ${d.getDate()}. ${CZ_MONTHS_GENITIVE[d.getMonth()]}`;
+  // Datum je pevně dané (den příběhu), čas je skutečný.
+  document.getElementById('lock-date').textContent = 'sobota 28. března 2026';
 }
 renderLockScreenClock();
 setInterval(renderLockScreenClock, 10000);
